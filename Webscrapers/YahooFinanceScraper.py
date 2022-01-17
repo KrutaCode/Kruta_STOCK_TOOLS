@@ -262,9 +262,13 @@ class YahooFinanceScraper:
             return self.yahoo_dict['Post-Market']
         except KeyError:
             pass
+"""
+Example Use: 
+_______________________________
 
 def main():
-    y = YahooFinanceScraper("GME")
+    y = YahooFinanceScraper("AAPL") #Creates an object will info related to the ticker entered. 
 
-    print(f"{y.getYearRange()}")
+    print(f"{y.getLivePrice()}") #Gets the most recent price of live market hours. If it is after close, or the weekend then it will return the closing prices. 
 main()
+"""
